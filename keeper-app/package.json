@@ -1,13 +1,17 @@
+
+
 {
-  "name": "keeper-app-part-1-starting",
+  "name": "keeper-app",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-scripts": "^1.1.5"
+    "react-scripts": "^4.0.3"
   },
   "devDependencies": {
     "typescript": "3.3.3"
