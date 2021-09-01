@@ -32,7 +32,8 @@ function App() {
                         key={index}
                         id={index}
                         title={noteItem.title}
-                        content={noteItem.content}
+                        task={noteItem.task}
+                        deadline={noteItem.deadline}
                         onDelete={deleteNote}
                     />
                 );

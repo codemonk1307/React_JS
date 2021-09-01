@@ -4,7 +4,8 @@ import React, { useState } from "react";
 function CreateArea(props) {
     const [note, setNote] = useState({
         title: "",
-        content: ""
+        task: "",
+        deadline: ""
     });
 
     function handleChange(event) {
@@ -22,7 +23,8 @@ function CreateArea(props) {
         props.onAdd(note);
         setNote({
             title: "",
-            content: ""
+            task: "",
+            deadline: ""
         });
         event.preventDefault();
     }
@@ -34,14 +36,21 @@ function CreateArea(props) {
                     name="title"
                     onChange={handleChange}
                     value={note.title}
-                    placeholder="Title"
+                    placeholder="What's the Task"
                 />
                 <textarea
-                    name="content"
+                    name="task"
                     onChange={handleChange}
-                    value={note.content}
-                    placeholder="Take a note..."
+                    value={note.task}
+                    placeholder="Task Description..."
                     rows="3"
+                />
+                <textarea
+                    name="deadline"
+                    onChange={handleChange}
+                    value={note.deadline}
+                    placeholder="Task Deadline"
+                    rows="1"
                 />
                 <button onClick={submitNote}>Add</button>
             </form>
